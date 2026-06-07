@@ -1,0 +1,29 @@
+import 'package:flutter/material.dart';
+import 'package:hive_flutter/hive_flutter.dart';
+import 'package:provider/provider.dart';
+import 'app.dart';
+import 'providers/app_provider.dart';
+import 'providers/content_provider.dart';
+import 'database/database_helper.dart';
+
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  // Initialize Hive (local storage)
+  await Hive.initFlutter();
+  await Hive.openBox('settings');
+  await Hive.openBox('progress');
+
+  // Initialize SQLite database
+  await DatabaseHelper.instance.database;
+
+  runApp(
+    MultiProvider(
+      providers: [
+        ChangeNotifierProvider(create: (_) => AppProvider()),
+        ChangeNotifierProvider(create: (_) => ContentProvider()),
+      ],
+      child: const GyaanPathApp(),
+    ),
+  );
+}
