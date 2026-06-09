@@ -190,7 +190,7 @@ class _StudentCard extends StatelessWidget {
         gradient: LinearGradient(
           colors: [
             AppColors.saffron,
-            AppColors.saffron.withOpacity(0.7),
+            AppColors.saffron.withValues(alpha: 0.7),
           ],
           begin: Alignment.topLeft,
           end:   Alignment.bottomRight,
@@ -201,7 +201,7 @@ class _StudentCard extends StatelessWidget {
         children: [
           CircleAvatar(
             radius: 28,
-            backgroundColor: Colors.white.withOpacity(0.2),
+            backgroundColor: Colors.white.withValues(alpha: 0.2),
             child: Text(
               name.isNotEmpty ? name[0].toUpperCase() : 'S',
               style: const TextStyle(
@@ -227,7 +227,7 @@ class _StudentCard extends StatelessWidget {
                 '$board · Class $classNum',
                 style: TextStyle(
                   fontSize: 13,
-                  color: Colors.white.withOpacity(0.8),
+                  color: Colors.white.withValues(alpha: 0.8),
                 ),
               ),
             ],
@@ -257,9 +257,9 @@ class _StatCard extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(14),
         decoration: BoxDecoration(
-          color: color.withOpacity(0.08),
+          color: color.withValues(alpha: 0.08),
           borderRadius: BorderRadius.circular(12),
-          border: Border.all(color: color.withOpacity(0.2)),
+          border: Border.all(color: color.withValues(alpha: 0.2)),
         ),
         child: Column(
           children: [
@@ -345,7 +345,7 @@ class _SubjectProgress extends StatelessWidget {
             child: LinearProgressIndicator(
               value: pct,
               minHeight: 5,
-              backgroundColor: color.withOpacity(0.1),
+              backgroundColor: color.withValues(alpha: 0.1),
               valueColor: AlwaysStoppedAnimation<Color>(color),
             ),
           ),

@@ -21,13 +21,13 @@ class OfflineBadge extends StatelessWidget {
           ),
           decoration: BoxDecoration(
             color: isOnline
-              ? AppColors.deepGreen.withOpacity(0.1)
-              : AppColors.saffron.withOpacity(0.1),
+              ? AppColors.deepGreen.withValues(alpha: 0.1)
+              : AppColors.saffron.withValues(alpha: 0.1),
             borderRadius: BorderRadius.circular(100),
             border: Border.all(
               color: isOnline
-                ? AppColors.deepGreen.withOpacity(0.3)
-                : AppColors.saffron.withOpacity(0.3),
+                ? AppColors.deepGreen.withValues(alpha: 0.3)
+                : AppColors.saffron.withValues(alpha: 0.3),
             ),
           ),
           child: Row(

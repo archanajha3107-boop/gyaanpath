@@ -28,7 +28,7 @@ class ChapterTile extends StatelessWidget {
           borderRadius: BorderRadius.circular(12),
           border: Border.all(
             color: isCompleted
-              ? AppColors.deepGreen.withOpacity(0.4)
+              ? AppColors.deepGreen.withValues(alpha: 0.4)
               : Theme.of(context).dividerColor,
           ),
         ),
@@ -40,8 +40,8 @@ class ChapterTile extends StatelessWidget {
               height: 40,
               decoration: BoxDecoration(
                 color: isCompleted
-                  ? AppColors.deepGreen.withOpacity(0.12)
-                  : AppColors.saffron.withOpacity(0.10),
+                  ? AppColors.deepGreen.withValues(alpha: 0.12)
+                  : AppColors.saffron.withValues(alpha: 0.10),
                 borderRadius: BorderRadius.circular(10),
               ),
               child: Center(

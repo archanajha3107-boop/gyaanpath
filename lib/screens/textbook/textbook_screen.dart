@@ -76,7 +76,7 @@ class _TextbookScreenState extends State<TextbookScreen> {
               onDocumentLoaded: (doc) {
                 setState(() {
                   _totalPages = doc.pagesCount;
-                  _isLoading  = false;
+                  
                 });
               },
               onPageChanged: (page) {

@@ -42,7 +42,7 @@ class SubjectCard extends StatelessWidget {
                   width: 48,
                   height: 48,
                   decoration: BoxDecoration(
-                    color: color.withOpacity(0.12),
+                    color: color.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(12),
                   ),
                   child: Center(
@@ -85,7 +85,7 @@ class SubjectCard extends StatelessWidget {
                       horizontal: 8, vertical: 3,
                     ),
                     decoration: BoxDecoration(
-                      color: AppColors.deepGreen.withOpacity(0.12),
+                      color: AppColors.deepGreen.withValues(alpha: 0.12),
                       borderRadius: BorderRadius.circular(100),
                     ),
                     child: Text(

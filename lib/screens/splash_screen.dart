@@ -80,7 +80,7 @@ class _SplashScreenState extends State<SplashScreen>
                     borderRadius: BorderRadius.circular(28),
                     boxShadow: [
                       BoxShadow(
-                        color: AppColors.saffron.withOpacity(0.4),
+                        color: AppColors.saffron.withValues(alpha: 0.4),
                         blurRadius: 32,
                         spreadRadius: 4,
                       ),
@@ -200,7 +200,7 @@ class _LoadingDotsState extends State<_LoadingDots>
             height: 8,
             decoration: BoxDecoration(
               shape: BoxShape.circle,
-              color: AppColors.saffron.withOpacity(
+              color: AppColors.saffron.withValues(alpha: 
                 0.3 + (_controllers[i].value * 0.7),
               ),
             ),

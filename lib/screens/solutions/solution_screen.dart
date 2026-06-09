@@ -123,7 +123,7 @@ class _ExerciseTabBar extends StatelessWidget {
               decoration: BoxDecoration(
                 color: isSelected
                   ? AppColors.saffron
-                  : AppColors.saffron.withOpacity(0.08),
+                  : AppColors.saffron.withValues(alpha: 0.08),
                 borderRadius: BorderRadius.circular(100),
               ),
               child: Center(
@@ -185,7 +185,7 @@ class _QuestionCardState extends State<_QuestionCard> {
         borderRadius: BorderRadius.circular(12),
         border: Border.all(
           color: _expanded
-            ? AppColors.saffron.withOpacity(0.3)
+            ? AppColors.saffron.withValues(alpha: 0.3)
             : Theme.of(context).dividerColor,
         ),
       ),
@@ -209,7 +209,7 @@ class _QuestionCardState extends State<_QuestionCard> {
                       horizontal: 8, vertical: 3,
                     ),
                     decoration: BoxDecoration(
-                      color: AppColors.saffron.withOpacity(0.1),
+                      color: AppColors.saffron.withValues(alpha: 0.1),
                       borderRadius: BorderRadius.circular(6),
                     ),
                     child: Text(
@@ -247,10 +247,10 @@ class _QuestionCardState extends State<_QuestionCard> {
           if (_expanded)
             Container(
               decoration: BoxDecoration(
-                color: AppColors.deepGreen.withOpacity(0.04),
+                color: AppColors.deepGreen.withValues(alpha: 0.04),
                 border: Border(
                   top: BorderSide(
-                    color: AppColors.deepGreen.withOpacity(0.2),
+                    color: AppColors.deepGreen.withValues(alpha: 0.2),
                   ),
                 ),
                 borderRadius: const BorderRadius.vertical(
@@ -331,7 +331,7 @@ class _DifficultyBadge extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 2),
       decoration: BoxDecoration(
-        color: _color.withOpacity(0.12),
+        color: _color.withValues(alpha: 0.12),
         borderRadius: BorderRadius.circular(100),
       ),
       child: Text(

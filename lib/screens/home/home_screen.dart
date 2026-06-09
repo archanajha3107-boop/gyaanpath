@@ -203,10 +203,10 @@ class _HomeHeader extends StatelessWidget {
               horizontal: 10, vertical: 4,
             ),
             decoration: BoxDecoration(
-              color: AppColors.saffron.withOpacity(0.12),
+              color: AppColors.saffron.withValues(alpha: 0.12),
               borderRadius: BorderRadius.circular(100),
               border: Border.all(
-                color: AppColors.saffron.withOpacity(0.3),
+                color: AppColors.saffron.withValues(alpha: 0.3),
               ),
             ),
             child: Text(
@@ -273,10 +273,10 @@ class _QuickAccessGrid extends StatelessWidget {
                 width: 56,
                 height: 56,
                 decoration: BoxDecoration(
-                  color: color.withOpacity(0.12),
+                  color: color.withValues(alpha: 0.12),
                   borderRadius: BorderRadius.circular(16),
                   border: Border.all(
-                    color: color.withOpacity(0.25),
+                    color: color.withValues(alpha: 0.25),
                   ),
                 ),
                 child: Icon(

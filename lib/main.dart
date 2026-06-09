@@ -1,3 +1,4 @@
+import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:flutter/material.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:provider/provider.dart';
@@ -9,13 +10,13 @@ import 'database/database_helper.dart';
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
 
-  // Initialize Hive (local storage)
   await Hive.initFlutter();
   await Hive.openBox('settings');
   await Hive.openBox('progress');
 
-  // Initialize SQLite database
-  await DatabaseHelper.instance.database;
+  if (!kIsWeb) {
+    await DatabaseHelper.instance.database;
+  }
 
   runApp(
     MultiProvider(

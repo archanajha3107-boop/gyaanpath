@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 import '../../constants/app_colors.dart';
-import '../../providers/app_provider.dart';
 
 class QuizScreen extends StatefulWidget {
   const QuizScreen({super.key});
@@ -132,10 +130,10 @@ class _QuizScreenState extends State<QuizScreen> {
                     horizontal: 12, vertical: 4,
                   ),
                   decoration: BoxDecoration(
-                    color: AppColors.gold.withOpacity(0.12),
+                    color: AppColors.gold.withValues(alpha: 0.12),
                     borderRadius: BorderRadius.circular(100),
                     border: Border.all(
-                      color: AppColors.gold.withOpacity(0.3),
+                      color: AppColors.gold.withValues(alpha: 0.3),
                     ),
                   ),
                   child: Text(
@@ -157,10 +155,10 @@ class _QuizScreenState extends State<QuizScreen> {
               width:   double.infinity,
               padding: const EdgeInsets.all(20),
               decoration: BoxDecoration(
-                color: AppColors.saffron.withOpacity(0.06),
+                color: AppColors.saffron.withValues(alpha: 0.06),
                 borderRadius: BorderRadius.circular(16),
                 border: Border.all(
-                  color: AppColors.saffron.withOpacity(0.2),
+                  color: AppColors.saffron.withValues(alpha: 0.2),
                 ),
               ),
               child: Text(
@@ -194,10 +192,10 @@ class _QuizScreenState extends State<QuizScreen> {
                 padding: const EdgeInsets.all(14),
                 margin: const EdgeInsets.only(bottom: 16),
                 decoration: BoxDecoration(
-                  color: AppColors.deepGreen.withOpacity(0.08),
+                  color: AppColors.deepGreen.withValues(alpha: 0.08),
                   borderRadius: BorderRadius.circular(10),
                   border: Border.all(
-                    color: AppColors.deepGreen.withOpacity(0.25),
+                    color: AppColors.deepGreen.withValues(alpha: 0.25),
                   ),
                 ),
                 child: Row(
@@ -266,8 +264,8 @@ class _OptionTile extends StatelessWidget {
 
   Color _getBgColor() {
     if (!answered) return Colors.transparent;
-    if (isCorrect) return AppColors.deepGreen.withOpacity(0.08);
-    if (isSelected && !isCorrect) return Colors.redAccent.withOpacity(0.06);
+    if (isCorrect) return AppColors.deepGreen.withValues(alpha: 0.08);
+    if (isSelected && !isCorrect) return Colors.redAccent.withValues(alpha: 0.06);
     return Colors.transparent;
   }
 
